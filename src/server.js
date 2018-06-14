@@ -36,7 +36,7 @@ async function main () {
     req.models = req.models || databaseClient.models
     next()
   })
-
+  app.get('/', (req, res) => res.sendStatus(200))
   app.post('/', multer().array(), (req, res) => {
     const date = new Date()
     const host = req.get('Origin')
