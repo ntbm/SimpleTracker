@@ -47,5 +47,6 @@ async function main () {
       .save()
     res.sendStatus(200)
   })
+  app.use('/', require('./routes'))
   return app
 }
